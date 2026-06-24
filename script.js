@@ -1,14 +1,42 @@
 async function lookupDNS() {
 
-    const domain = document.getElementById("domain").value;
-    const type = document.getElementById("recordType").value;
+    const domain =
+        document.getElementById("domain").value.trim();
 
-    const url =
-      `https://dns.google/resolve?name=${domain}&type=${type}`;
+    const type =
+        document.getElementById("recordType").value;
 
-    const response = await fetch(url);
-    const data = await response.json();
+    const result =
+        document.getElementById("result");
 
-    document.getElementById("result").textContent =
-        JSON.stringify(data, null, 2);
+    if(!domain){
+
+        result.textContent =
+            "Informe um domínio válido.";
+
+        return;
+    }
+
+    result.textContent =
+        "Consultando...";
+
+    try{
+
+        const response =
+            await fetch(
+            `https://dns.google/resolve?name=${domain}&type=${type}`
+            );
+
+        const data =
+            await response.json();
+
+        result.textContent =
+            JSON.stringify(data,null,2);
+
+    }
+    catch(error){
+
+        result.textContent =
+            "Erro ao consultar DNS.";
+    }
 }
