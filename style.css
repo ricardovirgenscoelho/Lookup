@@ -1,7 +1,3 @@
-/* ==================================================
-   RESET
-================================================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -23,19 +19,13 @@ a {
     text-decoration: none;
 }
 
-/* ==================================================
-   CONTAINER
-================================================== */
-
 .container {
     width: 90%;
     max-width: 1200px;
     margin: auto;
 }
 
-/* ==================================================
-   NAVBAR
-================================================== */
+/* NAVBAR */
 
 nav {
     position: fixed;
@@ -69,7 +59,6 @@ nav .container {
     color: #f5f5f5;
     margin-left: 20px;
     font-size: .95rem;
-    transition: .3s;
 }
 
 .menu a:hover {
@@ -78,18 +67,16 @@ nav .container {
 
 .menu .active {
     color: #00c8ff;
-    font-weight: 600;
+    font-weight: bold;
 }
 
-/* ==================================================
-   HERO
-================================================== */
+/* HERO */
 
 header {
-    min-height: 70vh;
+    min-height: 35vh;
     display: flex;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 120px;
 }
 
 .hero {
@@ -113,37 +100,29 @@ header {
     color: #d1d5db;
 }
 
-/* ==================================================
-   BOTÕES
-================================================== */
+.tool-badge {
 
-.buttons {
-    margin-top: 30px;
-}
-
-.btn {
     display: inline-block;
-    padding: 14px 24px;
-    border-radius: 8px;
-    transition: .3s;
-    font-weight: bold;
+
+    margin-top: 25px;
+
+    padding: 10px 20px;
+
+    border-radius: 30px;
+
+    background: #161b22;
+
+    border: 1px solid #30363d;
+
+    color: #00c8ff;
+
+    font-weight: 600;
 }
 
-.btn-primary {
-    background: #00c8ff;
-    color: #000;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-}
-
-/* ==================================================
-   SECTIONS
-================================================== */
+/* SECTIONS */
 
 section {
-    padding: 90px 0;
+    padding: 50px 0;
 }
 
 .section-title {
@@ -152,9 +131,7 @@ section {
     font-size: 2.2rem;
 }
 
-/* ==================================================
-   CARDS
-================================================== */
+/* CARDS */
 
 .cards {
     display: grid;
@@ -174,15 +151,12 @@ section {
     margin-bottom: 15px;
 }
 
-/* ==================================================
-   CONSULTA DNS
-================================================== */
+/* DNS FORM */
 
 .search-container {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    margin-bottom: 30px;
 }
 
 .search-container input {
@@ -192,8 +166,7 @@ section {
     border-radius: 8px;
     border: 1px solid #30363d;
     background: #0d1117;
-    color: #ffffff;
-    font-size: 1rem;
+    color: white;
 }
 
 .search-container select {
@@ -202,7 +175,7 @@ section {
     border-radius: 8px;
     border: 1px solid #30363d;
     background: #0d1117;
-    color: #ffffff;
+    color: white;
 }
 
 .search-container button {
@@ -213,15 +186,10 @@ section {
     color: #000;
     font-weight: bold;
     cursor: pointer;
-    transition: .3s;
-}
-
-.search-container button:hover {
-    transform: translateY(-2px);
 }
 
 .result-container {
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .result-container h3 {
@@ -237,13 +205,11 @@ pre {
     color: #7cffb0;
     overflow-x: auto;
     min-height: 250px;
-    font-family: Consolas, monospace;
     white-space: pre-wrap;
+    font-family: Consolas, monospace;
 }
 
-/* ==================================================
-   FOOTER
-================================================== */
+/* FOOTER */
 
 footer {
     text-align: center;
@@ -257,9 +223,7 @@ footer h3 {
     margin-bottom: 10px;
 }
 
-/* ==================================================
-   RESPONSIVO
-================================================== */
+/* RESPONSIVO */
 
 @media(max-width:900px){
 
@@ -279,12 +243,5 @@ footer h3 {
     .search-container select,
     .search-container button{
         width:100%;
-    }
-}
-
-@media(max-width:768px){
-
-    .cards{
-        grid-template-columns:1fr;
     }
 }
