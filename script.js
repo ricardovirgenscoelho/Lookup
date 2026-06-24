@@ -9,7 +9,7 @@ async function lookupDNS() {
     const result =
         document.getElementById("result");
 
-    if(!domain){
+    if (!domain) {
 
         result.textContent =
             "Informe um domínio válido.";
@@ -18,25 +18,25 @@ async function lookupDNS() {
     }
 
     result.textContent =
-        "Consultando...";
+        "Consultando registros DNS...";
 
-    try{
+    try {
 
         const response =
             await fetch(
-            `https://dns.google/resolve?name=${domain}&type=${type}`
+                `https://dns.google/resolve?name=${domain}&type=${type}`
             );
 
         const data =
             await response.json();
 
         result.textContent =
-            JSON.stringify(data,null,2);
+            JSON.stringify(data, null, 2);
 
     }
-    catch(error){
+    catch (error) {
 
         result.textContent =
-            "Erro ao consultar DNS.";
+            "Erro ao consultar o DNS.";
     }
 }
