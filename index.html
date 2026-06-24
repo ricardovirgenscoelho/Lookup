@@ -1,32 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <title>RVC DNS Lookup</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RVC DNS Lookup</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-<div class="container">
-    <h1>RVC DNS Lookup</h1>
+<header>
 
-    <input type="text" id="domain" placeholder="Digite o domínio">
-
-    <select id="recordType">
-        <option value="A">A</option>
-        <option value="AAAA">AAAA</option>
-        <option value="MX">MX</option>
-        <option value="TXT">TXT</option>
-        <option value="NS">NS</option>
-        <option value="CNAME">CNAME</option>
-    </select>
-
-    <button onclick="lookupDNS()">Consultar</button>
-
-    <pre id="result"></pre>
+<div class="logo">
+RVC DNS Lookup
 </div>
+
+<div class="subtitle">
+DNS • SPF • DKIM • DMARC • BIMI • MTA-STS
+</div>
+
+</header>
+
+<main>
+
+<div class="card">
+
+<h1>Consulta DNS</h1>
+
+<div class="search">
+
+<input
+type="text"
+id="domain"
+placeholder="Digite o domínio">
+
+<select id="recordType">
+
+<option value="A">A</option>
+<option value="AAAA">AAAA</option>
+<option value="MX">MX</option>
+<option value="TXT">TXT</option>
+<option value="NS">NS</option>
+<option value="CNAME">CNAME</option>
+
+</select>
+
+<button onclick="lookupDNS()">
+Consultar
+</button>
+
+</div>
+
+<pre id="result"></pre>
+
+</div>
+
+</main>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
