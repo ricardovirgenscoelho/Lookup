@@ -2,69 +2,137 @@
 <html lang="pt-BR">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RVC DNS Lookup</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>RVC DNS Lookup</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<header>
+    <header class="navbar">
 
-<div class="logo">
-RVC DNS Lookup
-</div>
+        <div class="logo">
+            <a href="https://www.rvctech.com.br">
+                RVC Tecnologia da Informação
+            </a>
+        </div>
 
-<div class="subtitle">
-DNS • SPF • DKIM • DMARC • BIMI • MTA-STS
-</div>
+        <nav class="menu">
 
-</header>
+            <a href="https://www.rvctech.com.br/#sobre">
+                Sobre
+            </a>
 
-<main>
+            <a href="https://www.rvctech.com.br/#especialidades">
+                Especialidades
+            </a>
 
-<div class="card">
+            <a href="https://www.rvctech.com.br/#experiencia">
+                Experiência
+            </a>
 
-<h1>Consulta DNS</h1>
+            <a href="https://www.rvctech.com.br/#tecnologias">
+                Tecnologias
+            </a>
 
-<div class="search">
+            <a href="https://www.rvctech.com.br/#certificacoes">
+                Certificações
+            </a>
 
-<input
-type="text"
-id="domain"
-placeholder="Digite o domínio">
+            <a href="https://www.rvctech.com.br/#contato">
+                Contato
+            </a>
 
-<select id="recordType">
+        </nav>
 
-<option value="A">A</option>
-<option value="AAAA">AAAA</option>
-<option value="MX">MX</option>
-<option value="TXT">TXT</option>
-<option value="NS">NS</option>
-<option value="CNAME">CNAME</option>
+    </header>
 
-</select>
+    <section class="hero">
 
-<button onclick="lookupDNS()">
-Consultar
-</button>
+        <div class="hero-content">
 
-</div>
+            <span class="badge">
+                Ferramentas de Segurança de E-mail
+            </span>
 
-<pre id="result"></pre>
+            <h1>
+                RVC DNS Lookup
+            </h1>
 
-</div>
+            <p>
+                Plataforma para consulta de registros DNS e validação de
+                SPF, DKIM, DMARC, BIMI e MTA-STS.
+            </p>
 
-</main>
+        </div>
 
-<script src="script.js"></script>
+    </section>
+
+    <main>
+
+        <div class="card">
+
+            <h2>Consulta DNS</h2>
+
+            <div class="search-container">
+
+                <input
+                    type="text"
+                    id="domain"
+                    placeholder="Digite o domínio (ex: rvctech.com.br)">
+
+                <select id="recordType">
+
+                    <option value="A">A</option>
+                    <option value="AAAA">AAAA</option>
+                    <option value="MX">MX</option>
+                    <option value="TXT">TXT</option>
+                    <option value="NS">NS</option>
+                    <option value="CNAME">CNAME</option>
+                    <option value="SOA">SOA</option>
+
+                </select>
+
+                <button onclick="lookupDNS()">
+                    Consultar
+                </button>
+
+            </div>
+
+            <div class="result-container">
+
+                <div class="result-title">
+                    Resultado
+                </div>
+
+                <pre id="result">
+Aguardando consulta...
+                </pre>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        © 2026 RVC Tech • DNS Lookup Tool
+
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
 
