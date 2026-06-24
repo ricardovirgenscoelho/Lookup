@@ -6,13 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>RVC DNS Lookup</title>
+    <title>RVC DNS Lookup | RVC Tech</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description"
+        content="Ferramenta de consulta DNS e validação de SPF, DKIM, DMARC, BIMI e MTA-STS da RVC Tech.">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <meta name="author" content="Ricardo Coelho">
 
     <link rel="stylesheet" href="style.css">
 
@@ -20,115 +19,168 @@
 
 <body>
 
-    <header class="navbar">
+    <nav>
 
-        <div class="logo">
-            <a href="https://www.rvctech.com.br">
-                RVC Tecnologia da Informação
-            </a>
+        <div class="container">
+
+            <div class="logo">
+                <a href="https://www.rvctech.com.br">
+                    RVC Tecnologia da Informação
+                </a>
+            </div>
+
+            <div class="menu">
+
+                <a href="https://www.rvctech.com.br/#sobre">Sobre</a>
+                <a href="https://www.rvctech.com.br/#especialidades">Especialidades</a>
+                <a href="https://www.rvctech.com.br/#experiencia">Experiência</a>
+                <a href="https://www.rvctech.com.br/#tecnologias">Tecnologias</a>
+                <a href="https://www.rvctech.com.br/#certificacoes">Certificações</a>
+                <a href="https://www.rvctech.com.br/#contato">Contato</a>
+
+                <a href="#"
+                   class="active">
+                    DNS Lookup
+                </a>
+
+            </div>
+
         </div>
 
-        <nav class="menu">
+    </nav>
 
-            <a href="https://www.rvctech.com.br/#sobre">
-                Sobre
-            </a>
+    <header>
 
-            <a href="https://www.rvctech.com.br/#especialidades">
-                Especialidades
-            </a>
+        <div class="container hero">
 
-            <a href="https://www.rvctech.com.br/#experiencia">
-                Experiência
-            </a>
+            <div class="hero-text">
 
-            <a href="https://www.rvctech.com.br/#tecnologias">
-                Tecnologias
-            </a>
+                <h1>RVC DNS Lookup</h1>
 
-            <a href="https://www.rvctech.com.br/#certificacoes">
-                Certificações
-            </a>
+                <p class="subtitle">
 
-            <a href="https://www.rvctech.com.br/#contato">
-                Contato
-            </a>
+                    Ferramenta profissional para consulta DNS e validação
+                    de SPF, DKIM, DMARC, BIMI, MTA-STS e TLS-RPT.
 
-        </nav>
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#consulta"
+                       class="btn btn-primary">
+                        Iniciar Consulta
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </header>
 
-    <section class="hero">
+    <section id="consulta">
 
-        <div class="hero-content">
+        <div class="container">
 
-            <span class="badge">
-                Ferramentas de Segurança de E-mail
-            </span>
+            <h2 class="section-title">
+                Consulta DNS
+            </h2>
 
-            <h1>
-                RVC DNS Lookup
-            </h1>
+            <div class="card">
 
-            <p>
-                Plataforma para consulta de registros DNS e validação de
-                SPF, DKIM, DMARC, BIMI e MTA-STS.
-            </p>
+                <div class="search-container">
+
+                    <input
+                        type="text"
+                        id="domain"
+                        placeholder="Digite o domínio (ex: rvctech.com.br)">
+
+                    <select id="recordType">
+
+                        <option value="A">A</option>
+                        <option value="AAAA">AAAA</option>
+                        <option value="MX">MX</option>
+                        <option value="TXT">TXT</option>
+                        <option value="NS">NS</option>
+                        <option value="CNAME">CNAME</option>
+                        <option value="SOA">SOA</option>
+
+                    </select>
+
+                    <button onclick="lookupDNS()">
+                        Consultar
+                    </button>
+
+                </div>
+
+                <div class="result-container">
+
+                    <h3>
+                        Resultado
+                    </h3>
+
+                    <pre id="result">
+Aguardando consulta...
+                    </pre>
+
+                </div>
+
+            </div>
 
         </div>
 
     </section>
 
-    <main>
+    <section>
 
-        <div class="card">
+        <div class="container">
 
-            <h2>Consulta DNS</h2>
+            <h2 class="section-title">
+                Ferramentas Planejadas
+            </h2>
 
-            <div class="search-container">
+            <div class="cards">
 
-                <input
-                    type="text"
-                    id="domain"
-                    placeholder="Digite o domínio (ex: rvctech.com.br)">
-
-                <select id="recordType">
-
-                    <option value="A">A</option>
-                    <option value="AAAA">AAAA</option>
-                    <option value="MX">MX</option>
-                    <option value="TXT">TXT</option>
-                    <option value="NS">NS</option>
-                    <option value="CNAME">CNAME</option>
-                    <option value="SOA">SOA</option>
-
-                </select>
-
-                <button onclick="lookupDNS()">
-                    Consultar
-                </button>
-
-            </div>
-
-            <div class="result-container">
-
-                <div class="result-title">
-                    Resultado
+                <div class="card">
+                    <h3>SPF Analyzer</h3>
+                    <p>Análise completa de registros SPF.</p>
                 </div>
 
-                <pre id="result">
-Aguardando consulta...
-                </pre>
+                <div class="card">
+                    <h3>DKIM Validator</h3>
+                    <p>Validação de assinaturas DKIM.</p>
+                </div>
+
+                <div class="card">
+                    <h3>DMARC Validator</h3>
+                    <p>Validação de políticas DMARC.</p>
+                </div>
+
+                <div class="card">
+                    <h3>BIMI Validator</h3>
+                    <p>Validação de BIMI e SVG Tiny PS.</p>
+                </div>
 
             </div>
 
         </div>
 
-    </main>
+    </section>
 
     <footer>
 
-        © 2026 RVC Tech • DNS Lookup Tool
+        <h3>RVC Tech</h3>
+
+        <p>
+            Cybersecurity • Cloud Security • Identity & Access Management
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 RVC Tecnologia da Informação. Todos os direitos reservados.
+        </p>
 
     </footer>
 
