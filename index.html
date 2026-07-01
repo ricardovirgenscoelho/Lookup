@@ -1,75 +1,183 @@
-<section id="consulta">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-    <div class="container">
+<head>
 
-        <h2 class="section-title">
-            Consulta DNS
-        </h2>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <div class="card">
+    <title>RVC DNS Lookup | RVC Tech</title>
 
-            <div class="search-container">
+    <meta name="description"
+        content="Ferramenta para consulta de registros DNS da RVC Tech.">
 
-                <input
-                    type="text"
-                    id="domain"
-                    placeholder="Digite o domínio (ex.: rvctech.com.br)">
+    <meta name="author"
+        content="Ricardo Coelho">
 
-                <select id="recordType">
+    <link rel="stylesheet" href="style.css">
 
-                    <option value="A">A</option>
-                    <option value="AAAA">AAAA</option>
-                    <option value="MX">MX</option>
-                    <option value="TXT">TXT</option>
-                    <option value="NS">NS</option>
-                    <option value="CNAME">CNAME</option>
-                    <option value="SOA">SOA</option>
+</head>
 
-                </select>
+<body>
 
-                <button onclick="lookupDNS()">
-                    Consultar
-                </button>
+    <!-- ==========================
+         NAVBAR
+    =========================== -->
 
+    <nav>
+
+        <div class="container">
+
+            <div class="logo">
+                <a href="https://www.rvctech.com.br">
+                    RVC Tecnologia da Informação
+                </a>
             </div>
 
-            <div class="result-container">
+            <div class="menu">
 
-                <h3>Resultado</h3>
+                <a href="https://www.rvctech.com.br/#sobre">
+                    Sobre
+                </a>
 
-                <pre id="result">
-Aguardando consulta...
-                </pre>
+                <a href="https://www.rvctech.com.br/#especialidades">
+                    Especialidades
+                </a>
+
+                <a href="https://www.rvctech.com.br/#experiencia">
+                    Experiência
+                </a>
+
+                <a href="https://www.rvctech.com.br/#tecnologias">
+                    Tecnologias
+                </a>
+
+                <a href="https://www.rvctech.com.br/#certificacoes">
+                    Certificações
+                </a>
+
+                <a href="https://www.rvctech.com.br/#contato">
+                    Contato
+                </a>
+
+                <a href="#" class="active">
+                    DNS Lookup
+                </a>
 
             </div>
 
         </div>
 
-    </div>
+    </nav>
 
-</section>
+    <!-- ==========================
+         HERO
+    =========================== -->
 
-<footer>
+    <header>
 
-    <div class="container">
+        <div class="container hero">
 
-        <h3>RVC Tech</h3>
+            <div class="hero-text">
 
-        <p>
-            Cybersecurity • Cloud Security • Identity & Access Management
-        </p>
+                <h1>RVC DNS Lookup</h1>
 
-        <br>
+                <p class="subtitle">
 
-        <p>
-            © 2026 RVC Tecnologia da Informação. Todos os direitos reservados.
-        </p>
+                    Ferramenta profissional para consulta de registros DNS,
+                    incluindo A, AAAA, MX, TXT, NS, CNAME e SOA.
 
-    </div>
+                </p>
 
-</footer>
+            </div>
 
-<script src="script.js"></script>
+        </div>
+
+    </header>
+
+    <!-- ==========================
+         CONSULTA
+    =========================== -->
+
+    <section id="consulta">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Consulta DNS
+            </h2>
+
+            <div class="card">
+
+                <div class="search-container">
+
+                    <input
+                        type="text"
+                        id="domain"
+                        placeholder="Digite um domínio (ex.: rvctech.com.br)">
+
+                    <select id="recordType">
+
+                        <option value="A">A</option>
+                        <option value="AAAA">AAAA</option>
+                        <option value="MX">MX</option>
+                        <option value="TXT">TXT</option>
+                        <option value="NS">NS</option>
+                        <option value="CNAME">CNAME</option>
+                        <option value="SOA">SOA</option>
+
+                    </select>
+
+                    <button onclick="lookupDNS()">
+                        Consultar
+                    </button>
+
+                </div>
+
+                <div class="result-container">
+
+                    <h3>
+                        Resultado
+                    </h3>
+
+                    <pre id="result">Nenhuma consulta realizada.
+
+Informe um domínio e clique em Consultar.</pre>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+         FOOTER
+    =========================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <h3>RVC Tech</h3>
+
+            <p>
+                Cybersecurity • Cloud Security • Identity & Access Management
+            </p>
+
+            <br>
+
+            <p>
+                © 2026 RVC Tecnologia da Informação.
+                Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
 
