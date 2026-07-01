@@ -1,247 +1,395 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ==========================================================
+   RVC DNS LOOKUP
+   style.css
+========================================================== */
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #0d1117;
-    color: #f5f5f5;
-    line-height: 1.7;
+body{
+
+    font-family:"Segoe UI",Arial,sans-serif;
+
+    background:#0d1117;
+
+    color:#f5f5f5;
+
+    line-height:1.7;
 }
 
-a {
-    text-decoration: none;
+a{
+    text-decoration:none;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
 }
 
-/* NAVBAR */
+/* ==========================================================
+   NAVBAR
+========================================================== */
 
-nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    background: rgba(13,17,23,.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #30363d;
+nav{
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(13,17,23,.95);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid #30363d;
 }
 
-nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
+nav .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 0;
 }
 
-.logo a {
-    color: #00c8ff;
-    font-size: 1.3rem;
-    font-weight: bold;
+.logo a{
+
+    color:#00c8ff;
+
+    font-size:1.3rem;
+
+    font-weight:bold;
 }
 
-.menu {
-    display: flex;
-    align-items: center;
+.menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
 }
 
-.menu a {
-    color: #f5f5f5;
-    margin-left: 20px;
-    font-size: .95rem;
+.menu a{
+
+    color:#f5f5f5;
+
+    font-size:.95rem;
+
+    transition:.25s;
 }
 
-.menu a:hover {
-    color: #00c8ff;
+.menu a:hover{
+
+    color:#00c8ff;
 }
 
-.menu .active {
-    color: #00c8ff;
-    font-weight: bold;
+.menu .active{
+
+    color:#00c8ff;
+
+    font-weight:600;
 }
 
-/* HERO */
+/* ==========================================================
+   HERO
+========================================================== */
 
-header {
-    min-height: 35vh;
-    display: flex;
-    align-items: center;
-    padding-top: 120px;
+header{
+
+    padding-top:120px;
+
+    padding-bottom:40px;
 }
 
-.hero {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+.hero{
+
+    text-align:center;
 }
 
-.hero-text {
-    max-width: 900px;
+.hero-text{
+
+    max-width:900px;
+
+    margin:auto;
 }
 
-.hero-text h1 {
-    font-size: 4rem;
-    color: #00c8ff;
-    margin-bottom: 20px;
+.hero-text h1{
+
+    font-size:3.5rem;
+
+    color:#00c8ff;
+
+    margin-bottom:15px;
+
+    font-weight:700;
 }
 
-.subtitle {
-    font-size: 1.2rem;
-    color: #d1d5db;
+.subtitle{
+
+    color:#d1d5db;
+
+    font-size:1.15rem;
+
+    max-width:900px;
+
+    margin:auto;
 }
 
-.tool-badge {
+/* ==========================================================
+   SECTION
+========================================================== */
 
-    display: inline-block;
+section{
 
-    margin-top: 25px;
-
-    padding: 10px 20px;
-
-    border-radius: 30px;
-
-    background: #161b22;
-
-    border: 1px solid #30363d;
-
-    color: #00c8ff;
-
-    font-weight: 600;
+    padding:25px 0 40px;
 }
 
-/* SECTIONS */
+.section-title{
 
-section {
-    padding: 50px 0;
+    color:#00c8ff;
+
+    font-size:2rem;
+
+    margin-bottom:25px;
 }
 
-.section-title {
-    color: #00c8ff;
-    margin-bottom: 40px;
-    font-size: 2.2rem;
+/* ==========================================================
+   CARD
+========================================================== */
+
+.card{
+
+    background:#161b22;
+
+    border:1px solid #30363d;
+
+    border-radius:14px;
+
+    padding:30px;
+
+    box-shadow:
+
+        0 8px 25px rgba(0,0,0,.25);
 }
 
-/* CARDS */
+/* ==========================================================
+   FORM
+========================================================== */
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 25px;
+.search-container{
+
+    display:grid;
+
+    grid-template-columns:
+
+        1fr
+        130px
+        140px;
+
+    gap:15px;
+
+    align-items:center;
 }
 
-.card {
-    background: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 12px;
-    padding: 25px;
+.search-container input{
+
+    padding:15px;
+
+    border-radius:8px;
+
+    border:1px solid #30363d;
+
+    background:#0d1117;
+
+    color:white;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.25s;
 }
 
-.card h3 {
-    color: #00c8ff;
-    margin-bottom: 15px;
+.search-container input:focus{
+
+    border-color:#00c8ff;
 }
 
-/* DNS FORM */
+.search-container select{
 
-.search-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    padding:15px;
+
+    border-radius:8px;
+
+    border:1px solid #30363d;
+
+    background:#0d1117;
+
+    color:white;
+
+    outline:none;
+
+    cursor:pointer;
 }
 
-.search-container input {
-    flex: 1;
-    min-width: 300px;
-    padding: 14px;
-    border-radius: 8px;
-    border: 1px solid #30363d;
-    background: #0d1117;
-    color: white;
+.search-container button{
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#00c8ff;
+
+    color:#000;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
 }
 
-.search-container select {
-    width: 130px;
-    padding: 14px;
-    border-radius: 8px;
-    border: 1px solid #30363d;
-    background: #0d1117;
-    color: white;
+.search-container button:hover{
+
+    background:#21d4ff;
+
+    transform:translateY(-2px);
 }
 
-.search-container button {
-    padding: 14px 24px;
-    border: none;
-    border-radius: 8px;
-    background: #00c8ff;
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
+/* ==========================================================
+   RESULTADO
+========================================================== */
+
+.result-container{
+
+    margin-top:30px;
 }
 
-.result-container {
-    margin-top: 25px;
+.result-container h3{
+
+    color:#00c8ff;
+
+    margin-bottom:15px;
 }
 
-.result-container h3 {
-    color: #00c8ff;
-    margin-bottom: 15px;
+pre{
+
+    background:#0b1220;
+
+    border:1px solid #30363d;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    min-height:260px;
+
+    color:#7cffb0;
+
+    overflow:auto;
+
+    font-family:
+
+        Consolas,
+        "Courier New",
+        monospace;
+
+    white-space:pre-wrap;
+
+    line-height:1.5;
 }
 
-pre {
-    background: #0d1117;
-    border: 1px solid #30363d;
-    border-radius: 10px;
-    padding: 20px;
-    color: #7cffb0;
-    overflow-x: auto;
-    min-height: 250px;
-    white-space: pre-wrap;
-    font-family: Consolas, monospace;
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+
+    margin-top:70px;
+
+    background:#161b22;
+
+    border-top:1px solid #30363d;
+
+    text-align:center;
+
+    padding:35px;
 }
 
-/* FOOTER */
+footer h3{
 
-footer {
-    text-align: center;
-    padding: 40px;
-    background: #161b22;
-    border-top: 1px solid #30363d;
+    color:#00c8ff;
+
+    margin-bottom:10px;
 }
 
-footer h3 {
-    color: #00c8ff;
-    margin-bottom: 10px;
-}
-
-/* RESPONSIVO */
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
 
 @media(max-width:900px){
 
-    .hero-text h1{
-        font-size:2.8rem;
-    }
-
     .menu{
+
         display:none;
     }
 
-    .search-container{
-        flex-direction:column;
+    .hero-text h1{
+
+        font-size:2.5rem;
     }
 
-    .search-container input,
-    .search-container select,
-    .search-container button{
+    .search-container{
+
+        grid-template-columns:1fr;
+    }
+
+    .search-container button,
+
+    .search-container select{
+
         width:100%;
     }
+
+}
+
+@media(max-width:600px){
+
+    .hero-text h1{
+
+        font-size:2rem;
+    }
+
+    .subtitle{
+
+        font-size:1rem;
+    }
+
+    .section-title{
+
+        font-size:1.6rem;
+    }
+
 }
